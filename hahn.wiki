@@ -1,10 +1,10 @@
-== cock
+== hahn
 
 [[toc:]]
 
 === Introduction
 
-Cock is a mechanism for documenting Scheme in the source-code itself;
+Hahn is a mechanism for documenting Scheme in the source-code itself;
 similar to [[http://www.stack.nl/~dimitri/doxygen/|Doxygen]],
 [[http://en.wikipedia.org/wiki/Javadoc|Javadoc]] or
 [[http://roxygen.org/|Roxygen]].
@@ -116,7 +116,7 @@ procedure-application.
 ===== {{@example-no-eval}}
 
 The {{@example-no-eval}} tag is also useful for providing examples of
-procedure-application; the difference is that cock does not attempt to
+procedure-application; the difference is that hahn does not attempt to
 evaluate them when rendering the documentation.
 
 {{@Example-no-eval}} is useful when the examples are incomplete or
@@ -324,7 +324,7 @@ documentation]].
 
 ==== The {{.meta}} file
 
-Cock reads the metadata from the {{.meta}} file such as: {{synopsis}},
+Hahn reads the metadata from the {{.meta}} file such as: {{synopsis}},
 {{author}}, {{email}}, {{user}}, {{repo}}, {{depends}}.
 
 <enscript highlight="scheme">((synopsis "Use the Landauer limit to calculate my program's entropy.")
@@ -334,7 +334,7 @@ Cock reads the metadata from the {{.meta}} file such as: {{synopsis}},
  (repo "https://github.com/klutometis/landauer")
  (category math)
  (license "BSD")
- (depends cock)
+ (depends hahn)
  (test-depends test)
  (foreign-depends))</enscript>
 
@@ -392,30 +392,30 @@ parameter."
 
 The {{.setup}} file does two things:
 
-# compiles each extension with {{-X cock}}; and
+# compiles each extension with {{-X hahn}}; and
 # generates documention.
 
-Extensions should be compiled with {{-X cock}}; this strips the
+Extensions should be compiled with {{-X hahn}}; this strips the
 documentation from the source before compilation so that the compiler
 is not confused.
 
-The {{cock}} binary from [[cock-utils]] generates the actual
-documentation; the {{cock}} egg provides a convenience macro
-{{run-cock}} so that installation does not fail for users who haven't
-installed {{cock-utils}}.
+The {{hahn}} binary from [[hahn-utils]] generates the actual
+documentation; the {{hahn}} egg provides a convenience macro
+{{run-hahn}} so that installation does not fail for users who haven't
+installed {{hahn-utils}}.
 
 There is a soft-dependency on the otherwise dependency-heavy egg
-{{cock-utils}}: users don't have to have it unless they want to
+{{hahn-utils}}: users don't have to have it unless they want to
 generate docs themselves, for some reason.
 
-<enscript highlight="scheme">(use cock setup-helper-mod)
+<enscript highlight="scheme">(use hahn setup-helper-mod)
 
 (setup-shared-extension-module
  'landauer
  (extension-version "0.0.1")
- compile-options: '(-X cock))
+ compile-options: '(-X hahn))
 
-(run-cock -o landauer.wiki landauer.scm landauer-core.scm)</enscript>
+(run-hahn -o landauer.wiki landauer.scm landauer-core.scm)</enscript>
 
 === Limitations
 

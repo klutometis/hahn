@@ -1,18 +1,18 @@
-(module cock
-  (at run-cock)
+(module hahn
+  (at run-hahn)
   (import chicken scheme)
 
-  (define-syntax run-cock
+  (define-syntax run-hahn
     (ir-macro-transformer
      (lambda (expression rename inject)
        `(handle-exceptions exn
           (warning (format "Documentation not generated: ~a
 
-This may be because cock-utils is not installed. Cock-utils is an
+This may be because hahn-utils is not installed. Hahn-utils is an
 optional egg for generating documentation and installation will
 succeed without it."
                            ((condition-property-accessor 'exn 'message) exn)))
-          (run (cock ,@(cdr expression)))))))
+          (run (hahn ,@(cdr expression)))))))
 
   ;; This is a hack to provide unescaped @s.
   (define at '@)
