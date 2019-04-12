@@ -1,5 +1,0 @@
-(use setup-helper-mod)
-
-(setup-shared-extension-module
- 'hahn
- (extension-version "0.9.3"))

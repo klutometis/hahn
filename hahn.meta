@@ -1,7 +1,0 @@
-((synopsis "In-source documentation")
- (author "Peter Danenberg")
- (category doc-tools)
- (license "BSD")
- (depends setup-helper)
- (test-depends)
- (foreign-depends))
