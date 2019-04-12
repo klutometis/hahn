@@ -1,6 +1,6 @@
 (module hahn
   (at run-hahn)
-  (import chicken scheme)
+  (import (chicken read-syntax) scheme)
 
   (define-syntax run-hahn
     (ir-macro-transformer

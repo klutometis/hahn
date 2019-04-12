@@ -1,0 +1,7 @@
+((version "0.10")
+ (license "BSD")
+ (category doc-tools)
+ (author "Peter Danenberg")
+ (synopsis "In-source documentation")
+ (components
+    (extension hahn)))
